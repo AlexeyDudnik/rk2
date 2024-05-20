@@ -1,3 +1,5 @@
 /home/vboxuser/design-patterns-cpp/chain-of-responsibility/build/CMakeFiles/chain-of-responsibility.dir
+/home/vboxuser/design-patterns-cpp/chain-of-responsibility/build/CMakeFiles/chain-of-responsibilityTest.dir
+/home/vboxuser/design-patterns-cpp/chain-of-responsibility/build/CMakeFiles/test.dir
 /home/vboxuser/design-patterns-cpp/chain-of-responsibility/build/CMakeFiles/edit_cache.dir
 /home/vboxuser/design-patterns-cpp/chain-of-responsibility/build/CMakeFiles/rebuild_cache.dir

@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/vboxuser/design-patterns-cpp/chain-of-responsibility/bu
 
 # The main recursive "all" target.
 all: CMakeFiles/chain-of-responsibility.dir/all
+all: CMakeFiles/chain-of-responsibilityTest.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/chain-of-responsibility.dir/clean
+clean: CMakeFiles/chain-of-responsibilityTest.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -99,6 +101,32 @@ chain-of-responsibility: CMakeFiles/chain-of-responsibility.dir/rule
 CMakeFiles/chain-of-responsibility.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain-of-responsibility.dir/build.make CMakeFiles/chain-of-responsibility.dir/clean
 .PHONY : CMakeFiles/chain-of-responsibility.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/chain-of-responsibilityTest.dir
+
+# All Build rule for target.
+CMakeFiles/chain-of-responsibilityTest.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain-of-responsibilityTest.dir/build.make CMakeFiles/chain-of-responsibilityTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain-of-responsibilityTest.dir/build.make CMakeFiles/chain-of-responsibilityTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/design-patterns-cpp/chain-of-responsibility/build/CMakeFiles --progress-num=3,4 "Built target chain-of-responsibilityTest"
+.PHONY : CMakeFiles/chain-of-responsibilityTest.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/chain-of-responsibilityTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/design-patterns-cpp/chain-of-responsibility/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/chain-of-responsibilityTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/design-patterns-cpp/chain-of-responsibility/build/CMakeFiles 0
+.PHONY : CMakeFiles/chain-of-responsibilityTest.dir/rule
+
+# Convenience name for target.
+chain-of-responsibilityTest: CMakeFiles/chain-of-responsibilityTest.dir/rule
+.PHONY : chain-of-responsibilityTest
+
+# clean rule for target.
+CMakeFiles/chain-of-responsibilityTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain-of-responsibilityTest.dir/build.make CMakeFiles/chain-of-responsibilityTest.dir/clean
+.PHONY : CMakeFiles/chain-of-responsibilityTest.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

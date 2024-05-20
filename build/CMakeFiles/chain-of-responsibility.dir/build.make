@@ -69,28 +69,28 @@ include CMakeFiles/chain-of-responsibility.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/chain-of-responsibility.dir/flags.make
 
-CMakeFiles/chain-of-responsibility.dir/ChainOfResponsibility.cpp.o: CMakeFiles/chain-of-responsibility.dir/flags.make
-CMakeFiles/chain-of-responsibility.dir/ChainOfResponsibility.cpp.o: ../ChainOfResponsibility.cpp
-CMakeFiles/chain-of-responsibility.dir/ChainOfResponsibility.cpp.o: CMakeFiles/chain-of-responsibility.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vboxuser/design-patterns-cpp/chain-of-responsibility/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/chain-of-responsibility.dir/ChainOfResponsibility.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chain-of-responsibility.dir/ChainOfResponsibility.cpp.o -MF CMakeFiles/chain-of-responsibility.dir/ChainOfResponsibility.cpp.o.d -o CMakeFiles/chain-of-responsibility.dir/ChainOfResponsibility.cpp.o -c /home/vboxuser/design-patterns-cpp/chain-of-responsibility/ChainOfResponsibility.cpp
+CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.o: CMakeFiles/chain-of-responsibility.dir/flags.make
+CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.o: ../src/ChainOfResponsibility.cpp
+CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.o: CMakeFiles/chain-of-responsibility.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vboxuser/design-patterns-cpp/chain-of-responsibility/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.o -MF CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.o.d -o CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.o -c /home/vboxuser/design-patterns-cpp/chain-of-responsibility/src/ChainOfResponsibility.cpp
 
-CMakeFiles/chain-of-responsibility.dir/ChainOfResponsibility.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chain-of-responsibility.dir/ChainOfResponsibility.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vboxuser/design-patterns-cpp/chain-of-responsibility/ChainOfResponsibility.cpp > CMakeFiles/chain-of-responsibility.dir/ChainOfResponsibility.cpp.i
+CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vboxuser/design-patterns-cpp/chain-of-responsibility/src/ChainOfResponsibility.cpp > CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.i
 
-CMakeFiles/chain-of-responsibility.dir/ChainOfResponsibility.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chain-of-responsibility.dir/ChainOfResponsibility.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/design-patterns-cpp/chain-of-responsibility/ChainOfResponsibility.cpp -o CMakeFiles/chain-of-responsibility.dir/ChainOfResponsibility.cpp.s
+CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/design-patterns-cpp/chain-of-responsibility/src/ChainOfResponsibility.cpp -o CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.s
 
 # Object files for target chain-of-responsibility
 chain__of__responsibility_OBJECTS = \
-"CMakeFiles/chain-of-responsibility.dir/ChainOfResponsibility.cpp.o"
+"CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.o"
 
 # External object files for target chain-of-responsibility
 chain__of__responsibility_EXTERNAL_OBJECTS =
 
-chain-of-responsibility: CMakeFiles/chain-of-responsibility.dir/ChainOfResponsibility.cpp.o
+chain-of-responsibility: CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.o
 chain-of-responsibility: CMakeFiles/chain-of-responsibility.dir/build.make
 chain-of-responsibility: CMakeFiles/chain-of-responsibility.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vboxuser/design-patterns-cpp/chain-of-responsibility/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable chain-of-responsibility"

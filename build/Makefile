@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /home/vboxuser/design-patterns-cpp/chain-of-responsibility/bu
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -129,29 +139,66 @@ chain-of-responsibility/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain-of-responsibility.dir/build.make CMakeFiles/chain-of-responsibility.dir/build
 .PHONY : chain-of-responsibility/fast
 
-ChainOfResponsibility.o: ChainOfResponsibility.cpp.o
-.PHONY : ChainOfResponsibility.o
+#=============================================================================
+# Target rules for targets named chain-of-responsibilityTest
+
+# Build rule for target.
+chain-of-responsibilityTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chain-of-responsibilityTest
+.PHONY : chain-of-responsibilityTest
+
+# fast build rule for target.
+chain-of-responsibilityTest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain-of-responsibilityTest.dir/build.make CMakeFiles/chain-of-responsibilityTest.dir/build
+.PHONY : chain-of-responsibilityTest/fast
+
+src/ChainOfResponsibility.o: src/ChainOfResponsibility.cpp.o
+.PHONY : src/ChainOfResponsibility.o
 
 # target to build an object file
-ChainOfResponsibility.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain-of-responsibility.dir/build.make CMakeFiles/chain-of-responsibility.dir/ChainOfResponsibility.cpp.o
-.PHONY : ChainOfResponsibility.cpp.o
+src/ChainOfResponsibility.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain-of-responsibility.dir/build.make CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.o
+.PHONY : src/ChainOfResponsibility.cpp.o
 
-ChainOfResponsibility.i: ChainOfResponsibility.cpp.i
-.PHONY : ChainOfResponsibility.i
+src/ChainOfResponsibility.i: src/ChainOfResponsibility.cpp.i
+.PHONY : src/ChainOfResponsibility.i
 
 # target to preprocess a source file
-ChainOfResponsibility.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain-of-responsibility.dir/build.make CMakeFiles/chain-of-responsibility.dir/ChainOfResponsibility.cpp.i
-.PHONY : ChainOfResponsibility.cpp.i
+src/ChainOfResponsibility.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain-of-responsibility.dir/build.make CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.i
+.PHONY : src/ChainOfResponsibility.cpp.i
 
-ChainOfResponsibility.s: ChainOfResponsibility.cpp.s
-.PHONY : ChainOfResponsibility.s
+src/ChainOfResponsibility.s: src/ChainOfResponsibility.cpp.s
+.PHONY : src/ChainOfResponsibility.s
 
 # target to generate assembly for a file
-ChainOfResponsibility.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain-of-responsibility.dir/build.make CMakeFiles/chain-of-responsibility.dir/ChainOfResponsibility.cpp.s
-.PHONY : ChainOfResponsibility.cpp.s
+src/ChainOfResponsibility.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain-of-responsibility.dir/build.make CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.s
+.PHONY : src/ChainOfResponsibility.cpp.s
+
+tests/test.o: tests/test.cpp.o
+.PHONY : tests/test.o
+
+# target to build an object file
+tests/test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain-of-responsibilityTest.dir/build.make CMakeFiles/chain-of-responsibilityTest.dir/tests/test.cpp.o
+.PHONY : tests/test.cpp.o
+
+tests/test.i: tests/test.cpp.i
+.PHONY : tests/test.i
+
+# target to preprocess a source file
+tests/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain-of-responsibilityTest.dir/build.make CMakeFiles/chain-of-responsibilityTest.dir/tests/test.cpp.i
+.PHONY : tests/test.cpp.i
+
+tests/test.s: tests/test.cpp.s
+.PHONY : tests/test.s
+
+# target to generate assembly for a file
+tests/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain-of-responsibilityTest.dir/build.make CMakeFiles/chain-of-responsibilityTest.dir/tests/test.cpp.s
+.PHONY : tests/test.cpp.s
 
 # Help Target
 help:
@@ -161,10 +208,15 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... chain-of-responsibility"
-	@echo "... ChainOfResponsibility.o"
-	@echo "... ChainOfResponsibility.i"
-	@echo "... ChainOfResponsibility.s"
+	@echo "... chain-of-responsibilityTest"
+	@echo "... src/ChainOfResponsibility.o"
+	@echo "... src/ChainOfResponsibility.i"
+	@echo "... src/ChainOfResponsibility.s"
+	@echo "... tests/test.o"
+	@echo "... tests/test.i"
+	@echo "... tests/test.s"
 .PHONY : help
 
 

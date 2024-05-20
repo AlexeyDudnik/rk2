@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/vboxuser/design-patterns-cpp/chain-of-responsibility/src/ChainOfResponsibility.cpp" "CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.o" "gcc" "CMakeFiles/chain-of-responsibility.dir/src/ChainOfResponsibility.cpp.o.d"
+  "/home/vboxuser/design-patterns-cpp/chain-of-responsibility/tests/test.cpp" "CMakeFiles/chain-of-responsibilityTest.dir/tests/test.cpp.o" "gcc" "CMakeFiles/chain-of-responsibilityTest.dir/tests/test.cpp.o.d"
   )
 
 # Targets to which this target links.

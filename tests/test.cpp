@@ -1,4 +1,5 @@
 #include <iostream>
+
 class Handler
 {
 public:
@@ -17,6 +18,7 @@ public:
     }
   }
   // ...
+
 private:
   Handler *successor;
 };
@@ -60,7 +62,12 @@ public:
   bool canHandle()
   {
     // ...
-    return true;
+    return canHandleValue;
+  }
+  
+  void setCanHandleValue(bool value)
+  {
+    canHandleValue = value;
   }
   
   virtual void handleRequest()
@@ -77,9 +84,9 @@ public:
     // ...
   }
   
-  // ...
+private:
+  bool canHandleValue = true; // изначальное значение
 };
-
 
 void test1()
 {
@@ -88,7 +95,7 @@ void test1()
     
     handler1.setHandler(&handler2);
     handler1.handleRequest();
-std::cout << "Тест 1 пройден: ConcreteHandler1 передал запрос ConcreteHandler2" << std::endl;
+    std::cout << "Тест 1 пройден: ConcreteHandler1 передал запрос ConcreteHandler2" << std::endl;
 }
 
 void test2()
@@ -98,7 +105,7 @@ void test2()
     
     handler1.setHandler(&handler2);
     handler2.handleRequest();
-std::cout << "Тест 2 пройден: ConcreteHandler2 обработал запрос" << std::endl;
+    std::cout << "Тест 2 пройден: ConcreteHandler2 обработал запрос" << std::endl;
 }
 
 void test3()
@@ -106,11 +113,12 @@ void test3()
     ConcreteHandler1 handler1;
     ConcreteHandler2 handler2;
     
-   handler1.canHandle = [](/* параметры */) { return true; };
+    // Устанавливаем, что handler2 не может обработать запрос
+    handler2.setCanHandleValue(false);
     
     handler1.setHandler(&handler2);
     handler1.handleRequest();
-    std::cout << "Тест 3 пройден: ConcreteHandler1 обработал запрос сам" << std::endl;
+    std::cout << "Тест 3 пройден: Ни один из обработчиков не может обработать запрос" << std::endl;
 }
 
 int main()
