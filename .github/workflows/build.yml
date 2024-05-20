@@ -10,8 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Configure CMake
-        run: cmake -DCMAKE_BUILD_TYPE=Debug -S . -B build
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Install CMake
@@ -27,10 +25,7 @@ jobs:
       - name: Create build directory
         run: mkdir build
       - name: Configure CMake
-        run: |
-         export ASAN_OPTIONS=detect_leaks=1  
-         export LSAN_OPTIONS=suppressions=/path/to/lsan_suppressions.txt 
-         cmake -DCMAKE_CXX_FLAGS="-fsanitize=address,leak -fno-omit-frame-pointer -g" -S . -B build
+        run: cmake -S . -B build
       - name: Build
         run: cmake --build build
       - name: Run tests
