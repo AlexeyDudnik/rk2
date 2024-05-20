@@ -11,11 +11,13 @@ public:
     successor = s;
   }
   
-  virtual void handleRequest()
+virtual void handleRequest()
   {
-    if (successor != 0)
+    if (successor != nullptr)
     {
       successor->handleRequest();
+    }else{
+        // Обработка случая, когда указатель не инициализирован или нулевой
     }
   }
   // ...
