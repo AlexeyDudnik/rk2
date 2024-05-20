@@ -110,7 +110,7 @@ void test1() {
   }
 }
 
-/*void test2()
+void test2()
 {
     ConcreteHandler1 handler1;
     ConcreteHandler2 handler2;
@@ -131,13 +131,13 @@ void test3()
     handler1.setHandler(&handler2);
     handler1.handleRequest();
     std::cout << "Тест 3 пройден: Ни один из обработчиков не может обработать запрос" << std::endl;
-}*/
+}
 
 int main()
 {
     test1();
-    /*test2();
-    test3();*/
+    test2();
+    test3();
     
     return 0;
 }
