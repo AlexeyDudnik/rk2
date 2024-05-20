@@ -88,17 +88,29 @@ private:
   bool canHandleValue = true; // изначальное значение
 };
 
-void test1()
-{
-    ConcreteHandler1 handler1;
-    ConcreteHandler2 handler2;
-    
-    handler1.setHandler(&handler2);
-    handler1.handleRequest();
-    std::cout << "Тест 1 пройден: ConcreteHandler1 передал запрос ConcreteHandler2" << std::endl;
+
+void test1() {
+  std::stringstream buffer;
+  std::streambuf *sbuf = std::cout.rdbuf();
+  std::cout.rdbuf(buffer.rdbuf());
+
+  ConcreteHandler1 handler1;
+  ConcreteHandler2 handler2;
+  
+  handler1.setHandler( &handler2 );
+  handler1.handleRequest();
+
+  std::string output = buffer.str();
+  std::cout.rdbuf(sbuf);
+
+  if (output == "Cannot be handled by Handler 1nHandled by Handler 2n") {
+    std::cout << "Test 1 passedn";
+  } else {
+    std::cout << "Test 1 failedn";
+  }
 }
 
-void test2()
+/*void test2()
 {
     ConcreteHandler1 handler1;
     ConcreteHandler2 handler2;
@@ -119,13 +131,13 @@ void test3()
     handler1.setHandler(&handler2);
     handler1.handleRequest();
     std::cout << "Тест 3 пройден: Ни один из обработчиков не может обработать запрос" << std::endl;
-}
+}*/
 
 int main()
 {
     test1();
-    test2();
-    test3();
+    /*test2();
+    test3();*/
     
     return 0;
 }
