@@ -1,18 +1,16 @@
-# CMakeLists.txt
-
 cmake_minimum_required(VERSION 3.10)
 
-# Название проекта
+# Project name
 project(chain-of-responsibility)
 
-# Установить стандарт C++
+# Set C++ standard
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Добавить исходные файлы
+# Add source files
 add_executable(chain-of-responsibility src/ChainOfResponsibility.cpp)
 
-# Добавить тесты
+# Enable testing
 enable_testing()
 include_directories(${GTEST_INCLUDE_DIRS})
 
